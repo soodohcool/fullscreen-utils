@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fullscreen Utility Demo</title>
+
+  <script type="module">
+    // Usage example
+    import { FullscreenUtility, FullscreenUtils } from './FullscreenUtility.js'
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const fullscreenUtility = FullscreenUtils  // Use the Singleton instance
+      const fullscreenBtn = document.getElementById('fullscreenBtn')
+
+      if (fullscreenUtility.isFullscreenEnabled()) {
+        fullscreenBtn.addEventListener('click', () => {
+          try {
+            fullscreenUtility.toggleFullscreen(document.documentElement)
+          } catch (err) {
+            console.error('An error occurred while toggling fullscreen:', err)
+          }
+        })
+      } else {
+        fullscreenBtn.disabled = true
+      }
+    })
+  </script>
+</head>
+
+<body>
+  <button id="fullscreenBtn">Toggle Fullscreen</button>
+</body>
+
+</html>
