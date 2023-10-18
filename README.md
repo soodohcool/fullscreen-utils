@@ -9,6 +9,7 @@ This utility provides an easy way to toggle fullscreen mode in your web applicat
 ## Standard Usage
 
 Refer to the `demo.html` file located in the root directory of this repository. 
+
 ***NOTE: Make sure you specify `type="module"` in your `<script>` tag as the utility is a module***
 
 ## Importing the Utility
